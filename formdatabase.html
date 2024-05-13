@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Submit Form to Google Sheets</h1>
-  <form id="myForm">
+  <form id="formcontato">
     <label for="_nome">Nome:</label>
     <input type="text" id="_nome" name="_nome" required><br>
     <label for="_email">Email:</label>
@@ -17,7 +17,7 @@
   </form>
 
   <script>
-    document.getElementById("myForm").addEventListener("submit", function(event) {
+    document.getElementById("formcontato").addEventListener("submit", function(event) {
       event.preventDefault();
       var formData = new FormData(this);
       fetch("https://script.google.com/macros/s/AKfycbziQiMDFHlavduNl7ENEf2FF8lGfYRNewWKcml0F-IFk4nxXSXiIxCYdxOZODxob9Ev/exec", {
