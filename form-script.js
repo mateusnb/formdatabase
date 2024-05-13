@@ -3,7 +3,7 @@ Paste this script into the 'Code.gs' tab in the Script Editor
 For a detailed explanation of this file, view 'form-script-commented.js'
 */
 
-var sheetName = 'Sheet1'
+var sheetName = 'formData'
 var scriptProp = PropertiesService.getScriptProperties()
 
 function intialSetup () {
