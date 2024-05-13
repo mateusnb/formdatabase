@@ -1,4 +1,4 @@
-<form name="submit-to-google-sheet">
+<form name="formcontato">
    <input name="_name" type="_name" placeholder="_name" required>
   <input name="_email" type="_email" placeholder="_email" required>
   <button type="submit">Send</button>
@@ -6,7 +6,7 @@
 
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbziQiMDFHlavduNl7ENEf2FF8lGfYRNewWKcml0F-IFk4nxXSXiIxCYdxOZODxob9Ev/exec'
-  const form = document.forms['submit-to-google-sheet']
+  const form = document.forms['formcontato']
 
   form.addEventListener('submit', e => {
     e.preventDefault()
