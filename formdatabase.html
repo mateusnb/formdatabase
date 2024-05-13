@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Form to Google Sheets</title>
+</head>
+<body>
+  <h1>Submit Form to Google Sheets</h1>
+  <form id="myForm">
+    <label for="field1">Field 1:</label>
+    <input type="text" id="field1" name="field1" required><br>
+    <label for="field2">Field 2:</label>
+    <input type="text" id="field2" name="field2" required><br>
+    <!-- Add more form fields as needed -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      var formData = new FormData(this);
+      fetch("https://script.google.com/macros/s/AKfycbziQiMDFHlavduNl7ENEf2FF8lGfYRNewWKcml0F-IFk4nxXSXiIxCYdxOZODxob9Ev/exec", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log("Form data submitted successfully");
+          // Optionally clear the form fields after successful submission
+          this.reset();
+        } else {
+          console.error("Error submitting form data");
+        }
+      })
+      .catch(error => console.error("Error:", error));
+    });
+  </script>
+</body>
+</html>
