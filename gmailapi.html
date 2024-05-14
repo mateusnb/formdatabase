@@ -57,7 +57,7 @@
             gapi.client.gmail.users.messages.send({
                 'userId': 'me',
                 'resource': {
-                    'raw': btoa("From: your_email@gmail.com\r\nTo: recipient@example.com\r\nSubject: Test Subject\r\n\r\nTest Body")
+                    'raw': btoa("From: mateusnb@gmail.com\r\nTo: mateusnb@gmail.com\r\nSubject: Test Subject\r\n\r\nTest Body")
                 }
             }).then(response => {
                 console.log('Email sent:', response);
