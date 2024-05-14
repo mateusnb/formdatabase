@@ -11,7 +11,9 @@
 
     <!-- Google API Client Library credentials -->
     <!-- https://console.cloud.google.com/apis/credentials/oauthclient/386170651254-0s4d8cdi1hojknjq3l2pfrpgf0n5hegv.apps.googleusercontent.com?project=getanalytica-3789d -->
-    <script src="https://apis.google.com/js/api.js"></script>
+
+    <script async defer src="https://apis.google.com/js/api.js"> </script>
+       <script src="gmailapi.js"></script>
 
     <script>
         const CLIENT_ID = '386170651254-0s4d8cdi1hojknjq3l2pfrpgf0n5hegv.apps.googleusercontent.com';
@@ -67,11 +69,8 @@
                 alert('Error sending email. Please check the console for details.');
             });
         }
-    </script>
 
-    <script async defer src="https://apis.google.com/js/api.js"
-   <script src="gmailapi.js"></script>
-        onload="this.onload=function(){};handleClientLoad()"
+          onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 </body>
