@@ -39,7 +39,7 @@ function handleAuthClick() {
 
 function sendEmail() {
     const body = document.getElementById('email-body').value;
-    const raw = makeEmail('your_email@gmail.com', 'recipient@example.com', 'Test Subject', body);
+    const raw = makeEmail('mateusnb@gmail.com', 'mateusnb@gmail.com', 'testando Subject', body);
     gapi.client.gmail.users.messages.send({
         'userId': 'me',
         'resource': {
